@@ -14,6 +14,7 @@ int main()
 	while (guesses > 0) {
 		cout << "type a guess" << endl;
 		int guess;
+		guesses--;
 		cin >> guess;
 		if (guess > num) {
 			cout << "too high, " << guesses << " tries remaining" << endl;
@@ -23,12 +24,17 @@ int main()
 		}
 		else if (guess == num) {
 			cout << "correct, with " << guesses << " to spare";
+			cin >> guess;
+			return 0;
 		}
 		else {
 			cout << "entirely incorrect, have an extra try" << endl;
 			guesses++;
 		}
-		guesses--;
+		if (guesses == 0) {
+			cout << num << " was the target number";
+			cin >> guess;
+		}
 	}
 	return 0;
 }

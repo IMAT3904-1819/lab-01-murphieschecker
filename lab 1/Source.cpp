@@ -22,20 +22,25 @@ int main()
 		else if (guess < num) {
 			cout << "too low, " << guesses << " tries remaining" << endl;
 		}
-		else if (guess == num) {
-			cout << "correct, with " << guesses << " to spare";
-			cin >> guess;
+		else /*if (guess == num)*/ {
+			cout << "correct, with " << guesses << " to spare"<< endl;
+			//cin >> guess;
+			system("pause");
 			return 0;
 		}
-		else {
+		/*else {
 			cout << "entirely incorrect, have an extra try" << endl;
 			guesses++;
-		}
+		}*/
 		if (guesses == 0) {
-			cout << num << " was the target number";
-			cin >> guess;
+			cout << num << " was the target number" << endl;
+			//cin >> guess;
 		}
 	}
+
+
+
+	system("pause");
 	return 0;
 }
 

@@ -9,8 +9,8 @@ using namespace std;
 int main()
 {
 	srand(time(NULL));
-	int num = rand() % 101;
-	int guesses = 5;
+	int num = (rand() % 1000) + 1;
+	int guesses = 8;
 	while (guesses > 0) {
 		cout << "type a guess" << endl;
 		int guess;
